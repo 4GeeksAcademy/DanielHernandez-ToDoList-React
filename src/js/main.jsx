@@ -13,6 +13,8 @@ import Home from './components/Home';
 import TodoApp from './components/ToDoApp';
 
 /*
+// Apuntes -------------------
+
 const animales =[
   {
     nombre: "Tigre",

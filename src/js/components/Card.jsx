@@ -2,6 +2,8 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 import { useState } from "react";
 
+// Apuntes -------------------
+
 export default function Card({title, description, image}) {
     const [colorName, setColorName] = useState()
     const [inputValue, setInputValue] = useState()
