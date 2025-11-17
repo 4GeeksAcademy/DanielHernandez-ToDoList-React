@@ -10,7 +10,9 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
+import TodoApp from './components/ToDoApp';
 
+/*
 const animales =[
   {
     nombre: "Tigre",
@@ -23,11 +25,16 @@ const animales =[
     descripcion:"El perro (Canis familiaris o Canis lupus familiaris, dependiendo de si se lo considera una especie o una subespecie del lobo) es un mamífero carnívoro de la familia de los cánidos, conocido comúnmente como perro doméstico o can. Es un animal de compañía muy popular en todo el mundo, considerado el «mejor amigo del hombre"  
   }
 ]
-
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Home lista={animales}/>
+  </React.StrictMode>,
+) 
+*/
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home lista={animales}/>
+    <TodoApp/>
   </React.StrictMode>,
 )
