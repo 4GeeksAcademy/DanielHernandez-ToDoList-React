@@ -4,17 +4,17 @@ import { useState } from "react";
 
 const TodoApp = () => {
     const [task, setTask] = useState("");
-    const [tasks, setTasks] = useState([]);
+    const [taskGroup, setTasks] = useState([]);
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter" && task.trim() !== "") {
-            setTasks([...tasks, task.trim()]);
+            setTasks([...taskGroup, task.trim()]);
             setTask("");
         }
     };
 
     const deleteTask = (indexToRemove) => {
-        setTasks(tasks.filter((_, index) => index !== indexToRemove));
+        setTasks(taskGroup.filter((_, index) => index !== indexToRemove));
     };
 
     return (
@@ -32,10 +32,10 @@ const TodoApp = () => {
                 />
 
                 <ul className="task-list">
-                    {tasks.length === 0 ? (
+                    {taskGroup.length === 0 ? (
                         <li className="empty-msg">No tasks, add some</li>
                     ) : (
-                        tasks.map((t, index) =>
+                        taskGroup.map((t, index) =>
                         (
                             <li key={index} className="task-item d-flex justify-content-between align-items-center">
                                 <span>{t}</span>
@@ -46,7 +46,7 @@ const TodoApp = () => {
                 </ul>
 
                 <div className="task-count">
-                    {tasks.length} item{tasks.length !== 1 ? "s" : ""} left
+                    {taskGroup.length} item{taskGroup.length !== 1 ? "s" : ""} left
                 </div>
             </div>
         </div>
